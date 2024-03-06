@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/home";
 import Results from "./pages/results";
 import Dashboard from "./pages/dashboard";
+import Check from "./pages/check";
 
 const App = () => {
   return (
@@ -20,6 +21,10 @@ const App = () => {
               <li>Results</li>
             </Link>
 
+            <Link to='/check'>
+              <li>Check</li>
+            </Link>
+
             <Link to='/dashboard'>
               <li>Dashboard</li>
             </Link>
@@ -31,6 +36,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/results" element={<Results />} />
+          <Route path="/check" element={<Check />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
