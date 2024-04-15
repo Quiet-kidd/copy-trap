@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Check = () => {
     return (
 
@@ -16,7 +18,10 @@ const Check = () => {
             </div>
             <p className="text-xs  py-1 mt-4">Supported file types: .doc, .docx, .pdf, .txt</p>
             <div className="bg-neutral-400 rounded h-2"></div>
-            <button className="bg-blue-500 rounded w-2/3 border-0 my-3 text-white">Start Plagiarism Check</button>
+            
+            <Link to={"/results"}>
+            <button className="bg-blue-500 rounded-lg w-2/3 border-0 my-3 text-white py-2 text-sm">Start Plagiarism Check</button>
+            </Link>
         </div>
     );
 }

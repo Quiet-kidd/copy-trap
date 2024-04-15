@@ -5,6 +5,9 @@ import Dashboard from "./pages/dashboard";
 import Check from "./pages/check";
 import Signin from "./pages/auth/signin";
 import SignUp from "./pages/auth/signup";
+import Verification from "./pages/auth/verification";
+import PasswordReset from "./pages/auth/passwordReset";
+import Newpassword from "./pages/auth/newpassword";
 
 const App = () => {
   return (
@@ -28,16 +31,12 @@ const App = () => {
             </Link>
 
             <Link to='/signin'>
-              <li>signin</li>
+              <li className="bg-blue-500 font-bold px-4 rounded-md text-white cursor-pointer hover:bg-blue-600 py-2">Sign in</li>
             </Link>
 
             <Link to='/signup'>
-              <li>Signup</li>
+              <li className="bg-gray-200 font-bold px-4 rounded-md cursor-pointer hover:bg-slate-600 hover:text-white py-2">Sign up</li>
             </Link>
-
-
-            <li className="bg-blue-500 font-bold px-4 rounded-md text-white cursor-pointer hover:bg-blue-600 py-2">Sign in</li>
-            <li className="bg-gray-200 font-bold px-4 rounded-md cursor-pointer hover:bg-slate-600 hover:text-white py-2">Sign up</li>
           </ul>
         </nav>
         <Routes>
@@ -47,6 +46,9 @@ const App = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/verification" element={<Verification />} />
+          <Route path="/password-reset" element={<PasswordReset />} />
+          <Route path="/new-password" element={<Newpassword />} />
         </Routes>
       </BrowserRouter>
     </>
