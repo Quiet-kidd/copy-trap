@@ -1,4 +1,18 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 const Results = () => {
+    const navigate = useNavigate();
+    useEffect(() => {
+        const access_token = localStorage.getItem('access_token')
+        const user = localStorage.getItem('user')
+        const isLoggedIn = access_token && user ? true : false
+
+        if (!isLoggedIn) {
+            navigate('/signin', {replace:true})
+        }
+    }, [])
+
     return (
         <div className="container mx-auto w-2/3">
             <button className="bg-gray-200 rounded-lg mb-5 float-right py-0.5 px-3 font-semibold">download report</button>

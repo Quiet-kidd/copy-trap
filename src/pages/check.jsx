@@ -1,6 +1,20 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Check = () => {
+    const navigate = useNavigate();
+    useEffect(() => {
+        const access_token = localStorage.getItem('access_token')
+        const user = localStorage.getItem('user')
+        const isLoggedIn = access_token && user ? true : false
+
+        if (!isLoggedIn) {
+            navigate('/signin', {replace:true})
+        }
+
+        console.log(isLoggedIn);
+    }, [])
+
     return (
 
         <div className="container mt-5 mx-auto pt-5 max-w-lg">

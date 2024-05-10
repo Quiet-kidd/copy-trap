@@ -9,8 +9,6 @@ const Home = () => {
                     <h2 className="text-white text-4xl font-bold py-2">copyTrap</h2>
                     <p className="text-white text-sm mt-3 mb-5">check your text for plagiarism in seconds</p>
                     <div className="bg-white w-full p1 flex rounded-xl h-12 items-center place-content-between"><input type="text" className="w5 border-0 pl-3" placeholder="Enter your text here" />
-                   
-                   
                     <button className="bg-blue-500 py-1 border-0 rounded text-white px-2 mr-2">check</button></div>
                 </div>
             </div>
